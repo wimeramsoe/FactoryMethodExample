@@ -3,11 +3,10 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.layout.Pane?>
 
-
-<Pane fx:id="animalPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<Pane fx:id="animalPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="example.Controller">
    <children>
-      <Button fx:id="random" layoutX="532.0" layoutY="2.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="64.0" text="Random" />
-      <Button fx:id="balanced" layoutX="532.0" layoutY="35.0" mnemonicParsing="false" text="Balanced" />
-      <Button fx:id="clear" layoutX="532.0" layoutY="66.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="64.0" text="Clear" />
+      <Button fx:id="random" layoutX="532.0" layoutY="2.0" mnemonicParsing="false" onAction="#randomButton" prefHeight="25.0" prefWidth="64.0" text="Random" />
+      <Button fx:id="balanced" layoutX="532.0" layoutY="35.0" mnemonicParsing="false" onAction="#balancedButton" text="Balanced" />
+      <Button fx:id="clear" layoutX="532.0" layoutY="66.0" mnemonicParsing="false" onAction="#clearButton" prefHeight="25.0" prefWidth="64.0" text="Clear" />
    </children>
 </Pane>
