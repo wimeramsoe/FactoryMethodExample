@@ -20,12 +20,38 @@ public class Controller {
     @FXML
     private Button clear;
 
+    protected static Pane imagePane;
+
 
     @FXML
     public void initialize() {
+        imagePane = new Pane();
+        imagePane.setMaxWidth(animalPane.getMaxWidth() - 75);
+        imagePane.setMaxHeight(animalPane.getMaxHeight());
+        animalPane.getChildren().add(imagePane);
         randomF = new RandomFactory();
         balancedF = new BalancedFactory();
     }
+
+    @FXML
+    public void randomButton() {
+        randomF.factoryMethod();
+    }
+
+    @FXML
+    public void balancedButton() {
+        balancedF.factoryMethod();
+    }
+
+    @FXML
+    public void clearButton() {
+        imagePane.getChildren().clear();
+    }
+
+
+
+
+
 
 
 }
