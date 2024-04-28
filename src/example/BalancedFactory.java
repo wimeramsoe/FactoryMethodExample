@@ -7,15 +7,9 @@ import javafx.scene.layout.Pane;
 import static example.Controller.*;
 
 public class BalancedFactory implements Factory {
-    private Dog dog;
-    private Cat cat;
-    private Lizzard lizzard;
-
-    public BalancedFactory() {
-        this.dog = new Dog();
-        this.cat = new Cat();
-        this.lizzard = new Lizzard();
-    }
+    private final Dog dog = new Dog();
+    private final Cat cat = new Cat();
+    private final Lizzard lizzard = new Lizzard();
 
     @Override
     public void factoryMethod() {
