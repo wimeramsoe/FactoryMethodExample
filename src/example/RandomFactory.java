@@ -1,8 +1,6 @@
 package example;
 
-import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.Pane;
 
 import static example.Controller.*;
 
@@ -10,7 +8,7 @@ public class RandomFactory implements Factory{
 
         private final Dog dog = new Dog();
         private final Cat cat = new Cat();
-        private final Lizzard lizzard = new Lizzard();
+        private final Lizard lizard = new Lizard();
 
         @Override
         public void factoryMethod() {
@@ -22,7 +20,7 @@ public class RandomFactory implements Factory{
                 } else if (random == 1) {
                         imageView = new ImageView(cat.getAnimal());
                 } else {
-                        imageView = new ImageView(lizzard.getAnimal());
+                        imageView = new ImageView(lizard.getAnimal());
                 }
 
                 int randomX = (int) (Math.random() * 525);

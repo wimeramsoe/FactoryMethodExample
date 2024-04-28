@@ -1,25 +1,23 @@
 package example;
 
-import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.Pane;
 
 import static example.Controller.*;
 
 public class BalancedFactory implements Factory {
     private final Dog dog = new Dog();
     private final Cat cat = new Cat();
-    private final Lizzard lizzard = new Lizzard();
+    private final Lizard lizard = new Lizard();
 
     @Override
     public void factoryMethod() {
         ImageView imageView;
-        if (dog.getDogCount() <= cat.getCatCount() && dog.getDogCount() <= lizzard.getLizzardCount()) {
+        if (dog.getDogCount() <= cat.getCatCount() && dog.getDogCount() <= lizard.getLizzardCount()) {
             imageView = new ImageView(dog.getAnimal());
-        } else if (cat.getCatCount() <= dog.getDogCount() && cat.getCatCount() <= lizzard.getLizzardCount()) {
+        } else if (cat.getCatCount() <= dog.getDogCount() && cat.getCatCount() <= lizard.getLizzardCount()) {
             imageView = new ImageView(cat.getAnimal());
         } else {
-            imageView = new ImageView(lizzard.getAnimal());
+            imageView = new ImageView(lizard.getAnimal());
         }
 
         int randomX = (int) (Math.random() * 525);

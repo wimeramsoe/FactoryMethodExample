@@ -2,7 +2,7 @@ package example;
 
 import javafx.scene.image.Image;
 
-public class Lizzard implements Animal{
+public class Lizard implements Animal{
     static private int count = 0;
 
     @Override
