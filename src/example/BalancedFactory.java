@@ -2,15 +2,14 @@ package example;
 
 import javafx.scene.image.ImageView;
 
-import static example.Controller.*;
+import static example.Controller.imagePane;
 
-public class BalancedFactory implements Factory {
-    private final Dog dog = new Dog();
-    private final Cat cat = new Cat();
-    private final Lizard lizard = new Lizard();
-
+public class BalancedFactory implements Factory{
     @Override
     public void factoryMethod() {
+        Dog dog = new Dog();
+        Cat cat = new Cat();
+        Lizard lizard = new Lizard();
         ImageView imageView;
         if (dog.getDogCount() <= cat.getCatCount() && dog.getDogCount() <= lizard.getLizzardCount()) {
             imageView = new ImageView(dog.getAnimal());

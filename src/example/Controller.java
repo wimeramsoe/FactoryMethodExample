@@ -2,11 +2,10 @@ package example;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 
 public class Controller {
-    private Factory randomF;
-    private Factory balancedF;
 
     @FXML
     private Pane animalPane;
@@ -22,6 +21,9 @@ public class Controller {
 
     protected static Pane imagePane;
 
+    private Factory randomFactory;
+    private Factory balancedFactory;
+
 
     @FXML
     public void initialize() {
@@ -29,18 +31,18 @@ public class Controller {
         imagePane.setMaxWidth(animalPane.getMaxWidth() - 75);
         imagePane.setMaxHeight(animalPane.getMaxHeight());
         animalPane.getChildren().add(imagePane);
-        randomF = new RandomFactory();
-        balancedF = new BalancedFactory();
+        randomFactory = new RandomFactory();
+        balancedFactory = new BalancedFactory();
     }
 
     @FXML
     public void randomButton() {
-        randomF.factoryMethod();
+        randomFactory.factoryMethod();
     }
 
     @FXML
     public void balancedButton() {
-        balancedF.factoryMethod();
+        balancedFactory.factoryMethod();
     }
 
     @FXML
